@@ -1,0 +1,36 @@
+<div class="flex-1 rounded-md h-fit w-full p-4">
+    <h1 class="text-4xl p-4 text-left w-full">Lista Studentów klasy {{className}}</h1>
+    <div class="flex flex-col gap-10 text-black-default ml-4">
+        <div class="flex bg-backgroundGray-default rounded-md w-full items-center p-5" >
+            <div class="text-2xl">Jan Kowalski</div>
+            <div class="ml-auto flex gap-4">
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Oceny</div>
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'NOTE'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'FREQUENCY'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Nieobecny</div>
+
+            </div>
+        </div>
+        <div class="flex bg-backgroundGray-default rounded-md w-full items-center p-5" >
+            <div class="text-2xl">Kamil Kowal</div>
+            <div class="ml-auto flex gap-4">
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Oceny</div>
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'NOTE'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'FREQUENCY'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Nieobecny</div>
+
+            </div>
+        </div>
+        <div class="flex bg-backgroundGray-default rounded-md w-full items-center p-5" >
+            <div class="text-2xl">Michał Mickiewicz</div>
+            <div class="ml-auto flex gap-4">
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Oceny</div>
+                <div *ngIf="listType == 'GRADES'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'NOTE'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Dodaj</div>
+                <div *ngIf="listType == 'FREQUENCY'"  class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/login">Nieobecny</div>
+
+            </div>
+        </div>
+        <button class=" text-white-default  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" type="submit">Zapisz</button>
+    </div>
+</div>

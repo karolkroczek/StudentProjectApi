@@ -1,0 +1,13 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Utwórz nowy przedmiot </h1>
+    <form class="flex flex-col p-4  gap-8 mt-4"  [formGroup]="formGroup" (submit)="handleSubmit()" >
+        <div class=" text-left">Nazwa</div>
+            <input class="p-2 rounded-md text-backgroundBlack-default" type="text"  id="name" name="name" formControlName="name">
+            
+            <div class="text-left">Opis</div>
+            <input name="description" formControlName="description" type="text" class="p-2 rounded-md text-backgroundBlack-default">
+
+          
+        <button class=" text-white-default ml-auto  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default">Nowy przedmiot</button>
+    </form>
+</div> 

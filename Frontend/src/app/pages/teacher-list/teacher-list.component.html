@@ -1,0 +1,13 @@
+<div class="flex-1 rounded-md h-fit w-full xl:h-3/4 animate-slide-left">
+    
+    <h1 class="text-4xl p-4 text-left w-full">Lista wszystkich nauczycieli</h1>
+    
+    <div class="flex gap-8 flex-col p-7">
+        
+        <div class="p-7 bg-backgroundGray-default w-full text-backgroundBlack-default rounded-md" *ngFor="let teacher of teachersList; index as i">
+                <div class="text-2xl mb-4">{{teacher.name}} {{teacher.surname}}</div>
+
+        </div>
+    </div>
+
+</div>

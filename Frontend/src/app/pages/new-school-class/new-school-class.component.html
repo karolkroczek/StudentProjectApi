@@ -1,0 +1,15 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Dodawanie nowej klasy</h1>
+    <form class="flex flex-col gap-2 w-1/2" [formGroup]="formGroup" (submit)="handleSubmit()">
+        <div>Nazwa</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="name" type="text">
+       <div>Rok rozpoczecia</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="startYear"  type="number">
+        <div>Rok zakonczenia</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="finishYear"  type="number"> 
+ 
+        <div class="mt-4 flex mr-auto">
+            <input class=" text-white-default w-fit px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" type="submit" value="Dodaj ucznia" >
+        </div>
+    </form>
+</div>

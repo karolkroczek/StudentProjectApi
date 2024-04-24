@@ -1,0 +1,14 @@
+<div class="flex-1 rounded-md h-fit w-full xl:h-3/4 animate-slide-left">
+    
+    <h1 class="text-4xl p-4 text-left w-full">Lista wszystkich przedmiotów</h1>
+    
+    <div class="flex gap-8 flex-col p-7">
+        
+        <div *ngIf="subjectList.length>0" class="p-7 bg-backgroundGray-default w-full text-backgroundBlack-default rounded-md">
+                <div  *ngFor="let subject of subjectList; index as i" class="text-2xl mb-4">{{subject.name}} {{subject.surname}}</div>
+                <div class=" text-white-default ml-auto  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" [routerLink]="'/new-subject/'">Dodaj przedmiot</div>
+        </div>
+        <div *ngIf="subjectList.length==0" >Brak przedmiotów dodaj jakis!</div>
+    </div>
+
+</div>

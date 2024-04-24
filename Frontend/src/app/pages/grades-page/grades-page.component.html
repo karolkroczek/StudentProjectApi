@@ -1,0 +1,15 @@
+
+<app-modal *ngIf="moreDetails" [specialText]="markMoreInfo" [displayText]="true" class="w-screen h-screen"></app-modal>
+<div class="flex-1 rounded-md h-fit w-fit p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Twoje oceny</h1>
+    <div class="p-8">
+        <div class="mt-8">
+            <h2 class="text-3xl">Lista wszystkich ocen</h2>
+            <div class="flex gap-8 mt-8 ml-8 flex-wrap">
+                <div class="p-8 rounded-md text-2xl text-black-default select-none bg-backgroundGray-default cursor-pointer" (click)="logFunction(mark)" *ngFor="let mark of marks">{{mark.mark}}</div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>

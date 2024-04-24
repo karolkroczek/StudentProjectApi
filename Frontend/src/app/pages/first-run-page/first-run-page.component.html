@@ -1,0 +1,16 @@
+<div class=" animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full"> Pierwsze uruchomienie!</h1>
+    <div>
+        
+        <app-new-director class="" *ngIf="step==0"></app-new-director>
+        
+        <app-new-subject *ngIf="step==1"></app-new-subject>
+        
+        <app-new-day-schedule *ngIf="step==2"></app-new-day-schedule>
+        
+        <app-new-schedule *ngIf="step==3"></app-new-schedule>
+        
+        <app-new-school-class *ngIf="step==4" ></app-new-school-class>
+    </div>
+    <button class=" text-backgroundBlack-default w-fit px-8 py-2 bg-backgroundGray-default text-center cursor-pointer rounded-md select-none hover:bg-white-default" (click)="nextStep()">Dalej</button>
+</div>

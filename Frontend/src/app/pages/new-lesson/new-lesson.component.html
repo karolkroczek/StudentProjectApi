@@ -1,0 +1,30 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4">
+    <h1 class="text-4xl p-4 text-left w-full">{{subject?subject:"Nowa lekcja"}}</h1>
+    <form [formGroup]="formGroup" class="flex flex-col p-4  gap-8 mt-4">
+        <div>
+            <div class="text-left">Temat lekcji</div>
+            <input name="description" formControlName="description" type="text"class="p-2 w-full rounded-md text-backgroundBlack-default ">
+        </div> 
+        <div>
+            <div>Lista obecnosci</div>
+            <div class=" text-white-default px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/class-overview/4bT/frequency">Sprawdz obecność</div>
+
+        </div>
+        <div>
+            <div>Dodaj zadanie</div>
+            <div class=" text-white-default px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/lesson-activities-form/homework">Dodaj zadanie</div>
+        </div>
+        <div>
+            <div>Dodaj uwagę</div>
+            <div class=" text-white-default px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/class-overview/4bT/grades">Dodaj uwagę</div>
+        </div>
+        <div>
+            <div>Dodaj sprawdzian</div>
+            <div class=" text-white-default px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" routerLink="/lesson-activities-form/4bT/quiz">Dodaj sprawdzian</div>
+        </div>
+
+            <button type="submit" class=" text-white-default mt-8 px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default">Zapisz</button>
+
+
+
+    </form> 

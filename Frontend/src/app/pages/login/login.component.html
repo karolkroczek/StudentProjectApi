@@ -1,0 +1,18 @@
+<div class="max-w-full mt-4">
+    <div class="text-center text-4xl">Logowanie</div>
+    <form [formGroup]="Loginform" (submit)="handleSubmit()"  class="flex flex-col p-4 items-center gap-8 mt-4">
+        <div>
+            <div class="text-left">Nazwa uzytkownika</div>
+            <input name="login" formControlName="emailAddress" class="p-2 mt-2 rounded-md text-backgroundBlack-default ">
+        </div>
+        <div>
+            <div class="text-left">Hasło</div>
+            <input name="password" formControlName="password"  type="password" class="p-2 mt-2 rounded-md text-backgroundBlack-default">
+        </div>
+    <button type="submit" class="px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md mt-4 hover:bg-basicRedDarker-default"  value="Zaloguj sie" >Zaloguj się</button>
+    <button (click)="navigateToFirst()" class=" text-backgroundBlack-default w-fit px-8 py-2 bg-backgroundGray-default text-center cursor-pointer rounded-md select-none hover:bg-white-default"  value="First" >Pierwsze uruchomienie</button>
+    </form>
+</div>
+
+<app-error *ngIf="Loginform.status == 'INVALID' && sendControlState == true " errorMessage="Uzupełnij wszystkie dane!"></app-error>
+<app-error *ngIf="errorState == true " errorMessage="Nie udało sie zalogować!"></app-error>

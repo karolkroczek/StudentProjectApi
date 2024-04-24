@@ -1,0 +1,40 @@
+<div class="flex w-screen my-4 items-center justify-between">
+
+  <div class="text-2xl ml-4 cursor-pointer select-none hover:opacity-80" routerLink="/login" routerLinkActive = "active" ariaCurrentWhenActive="page">E-dziennik</div>
+  <div class="flex-auto items-center flex flex-grow-0 ml-auto mr-12 gap-4">
+    
+    <div *ngIf="checkState()" class="text-2xl cursor-pointer select-none hover:opacity-80" routerLink="/student-page" routerLinkActive = "active" ariaCurrentWhenActive="page">{{getNameAndSurname()}}</div>
+    <div *ngIf="checkState()"class=" px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none  hover:bg-basicRedDarker-default" (click)="toggleLogged()" routerLink="/login">Wyloguj sie</div>
+  </div>
+</div>
+
+<div  class="flex gap-4 mx-8 h-full">
+  <div *ngIf="checkState()"  class="flex-3 hidden md:flex  flex-col gap-6 text-xl mt-12">
+    {{service.getRole()}}
+      <div routerLink="main" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Główny</div>
+      <div routerLink="/schedule" routerLinkActive = "active" ariaCurrentWhenActive="page"class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Plan Lekcji</div>
+      <div routerLink="/messages" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Wiadomości</div>
+      <div routerLink="/homeworks" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Zadania</div>
+      <div *ngIf="userRole!='Student'" routerLink="/class-overview" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Klasy</div>
+      <div routerLink="/profile" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">O mnie</div>
+      <div *ngIf="userRole=='Student'" routerLink="/all-tests" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Sprawdziany</div>
+      <div *ngIf="userRole=='Director'" routerLink="/new-teacher" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Dodawanie nauczyciela</div>
+      <div *ngIf="userRole=='Director'" routerLink="/new-student" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Dodawanie ucznia  </div>
+      <div *ngIf="userRole=='Director'" routerLink="/all-teachers" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Lista nauczycieli </div>
+      <div *ngIf="userRole!='Student'" routerLink="/all-students" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Lista uczniów </div>
+      <div routerLink="/grades-page/1" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Lista Ocen </div>
+      <div  routerLink="/subject-overview" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Lista przedmiotów </div>
+      <div *ngIf="userRole=='Director'"  routerLink="/new-school-class" routerLinkActive = "active" ariaCurrentWhenActive="page" class="select-none cursor-pointer hover:text-basicRed-default active:text-basicRedDarker-default">Dodaj nową klase </div>
+      
+    </div>
+
+<div class="w-full">
+  <router-outlet></router-outlet>
+</div>
+  
+</div>
+
+<footer class="text-white main bg-black flex " >
+
+
+</footer>

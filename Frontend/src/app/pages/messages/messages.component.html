@@ -1,0 +1,14 @@
+<div class="flex-4 rounded-md h-fit w-full p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Wiadomości</h1>
+    <div class="bg-backgroundGray-default text-backgroundBlack-default p-7 rounded-md">
+        <div class="text-3xl">Ostatnie wiadomosci</div>
+        <div class="p-4 w-full text-xl flex flex-col gap-4">
+            <div *ngFor="let message of recievedMails" class="cursor-pointer" [routerLink]="'/view-message/'+message.idMessage" >{{message.tittle}}</div>
+           
+             <div class="min-w-fit max-w-64 ml-auto ">
+                 <div routerLink="/new-message" routerLinkActive = "active" ariaCurrentWhenActive="page" class="text-white-default mt-4 px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default">Nowa wiadomość</div>
+                </div>
+
+        </div>
+    </div>
+</div>

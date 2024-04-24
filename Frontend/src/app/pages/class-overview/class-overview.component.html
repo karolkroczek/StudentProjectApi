@@ -1,0 +1,8 @@
+<div class="flex-1 rounded-md h-fit w-full p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Lista Klas</h1>
+    <div class="flex flex-col gap-10 text-black-default ml-4">
+        <div *ngFor="let class of classList" class="flex bg-backgroundGray-default rounded-md w-full items-center p-5" >
+            <div class="text-2xl">{{class.name}}</div>
+        </div>
+    </div>
+</div>

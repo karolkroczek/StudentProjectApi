@@ -1,0 +1,22 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Dodawanie nowego nauczyciela</h1>
+    <form class="flex flex-col gap-2 w-1/2" [formGroup]="formGroup" (submit)="handleSubmit()">
+        <div>Imie</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="name" type="text">
+       <div>Nazwisko</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="surname"  type="text">  
+        <div>Haslo</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="password"  type="text">  
+        <div>Pesel</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="pesel"  type="number">
+        <div>Stopien</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="grade"  type="text">
+        <div>Email adress</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="emailAddress"  type="email">
+        <div>Numer Telefonu</div>
+        <input class="p-2 rounded-md text-backgroundBlack-default" formControlName="phoneNumber"  type="text">
+        <div class="mt-4 flex mr-auto">
+            <input class=" text-white-default w-fit px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default" type="submit" value="Dodaj nauczyciela" >
+        </div>
+    </form>
+</div>

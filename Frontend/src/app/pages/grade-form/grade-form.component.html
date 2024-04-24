@@ -1,0 +1,19 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4">
+    <h1 class="text-4xl p-4 text-left w-full">Dodaj nową ocenę dla ucznia numer {{studentName}} </h1>
+    <form [formGroup]="formGroup" class="flex flex-col p-4  gap-8 mt-4" (submit)="handleSubmit()">
+        <div>
+            <div class="text-left">Ocena</div>
+            <input name="grade" formControlName="mark" type="number" min="1" max="6" class="p-2 rounded-md text-backgroundBlack-default ">
+        </div> 
+        <div>
+            <div class="text-left">Opis</div>
+            <input name="description" formControlName="description" type="text" class="p-2 rounded-md text-backgroundBlack-default">
+
+        </div>
+        <div class="flex gap-4">
+            <input name="semester-grade" formControlName="finalMark" type="checkbox">
+            <div class="text-left">Ocena semestralna</div>
+        </div>
+        <button class=" text-white-default ml-auto  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default"  type="submit">Dodaj ocene</button>
+    </form>
+</div> 

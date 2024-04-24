@@ -1,0 +1,44 @@
+<div class="flex-1 rounded-md h-fit w-1/2 p-4 animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Utwórz nowy plan dnia </h1>
+    <form [formGroup]="formGroup" (submit)="handleSubmit()" class="flex flex-col p-4  gap-8 mt-4">
+        <div class=" text-left">Pierwsza lekcja</div>
+        <div>
+            <select class="border p-4 w-fit bg-backgroundBlack-default"  id="emailAddress" formControlName="pierwszaLekcja">
+                <option>Wybierz opcje z dostępnych</option>
+                <option [value]="subject.id" *ngFor="let subject of loadedData" >{{subject.name}}</option>
+            </select>
+        </div> 
+        <div class=" text-left">Druga lekcja</div>
+        <div>
+            <select class="border p-4 w-fit bg-backgroundBlack-default"  id="emailAddress" formControlName="drugaLekcja">
+                <option>Wybierz opcje z dostępnych</option>
+                <option [value]="subject.id" *ngFor="let subject of loadedData" >{{subject.name}}</option>
+            </select>
+        </div> 
+        <div class=" text-left">Trzecia lekcja</div>
+        <div>
+            <select class="border p-4 w-fit bg-backgroundBlack-default"  id="emailAddress" formControlName="trzeciaLekcja">
+                <option>Wybierz opcje z dostępnych</option>
+                <option [value]="subject.id" *ngFor="let subject of loadedData" >{{subject.name}}</option>
+            </select>
+        </div> 
+        <div class=" text-left">Czwarta lekcja</div>
+        <div>
+            <select class="border p-4 w-fit bg-backgroundBlack-default"  id="emailAddress" formControlName="czwartaLekcja">
+                <option>Wybierz opcje z dostępnych</option>
+                <option [value]="subject.id" *ngFor="let subject of loadedData" >{{subject.name}}</option>
+            </select>
+        </div>
+        <div class=" text-left">Piąta lekcja</div> 
+        <div>
+            <select class="border p-4 w-fit bg-backgroundBlack-default"  id="emailAddress" formControlName="piataLekcja">
+                <option>Wybierz opcje z dostępnych</option>
+                <option [value]="subject.id" *ngFor="let subject of loadedData" >{{subject.name}}</option>
+            </select>
+        </div> 
+ 
+
+
+        <button class=" text-white-default ml-auto  px-8 py-2 bg-basicRed-default text-center cursor-pointer rounded-md select-none hover:bg-basicRedDarker-default">Wyślij wiadomość</button>
+    </form>
+</div> 

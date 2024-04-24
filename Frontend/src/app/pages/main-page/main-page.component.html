@@ -1,0 +1,29 @@
+<div class="flex-1 h-fit animate-slide-left">
+    <h1 class="text-4xl p-4 text-left w-full">Panel Główny </h1>
+    <div class="p-7 text-backgroundBlack-default flex w-full flex-wrap gap-7">
+        <div class=" bg-backgroundGray-default p-7 text-lg rounded-lg">
+            <div class="text-2xl">Następna lekcja</div>
+            <div class=" italic">Przykładowa zawartość</div>
+            <div>Jezyk Polski sala 12b</div >
+            <div *ngIf="userRole=='Teacher'" class="px-8 py-2 text-white-default bg-basicRed-default text-center cursor-pointer rounded-md mt-4 hover:bg-basicRedDarker-default" routerLink="/new-lesson">Przejdź</div>
+        </div>
+        <div class="bg-backgroundGray-default p-7 text-lg rounded-lg">
+            <div class="text-2xl">Dzisiejszy plan lekcji</div>
+            <div class=" italic">Przykładowa zawartość</div>
+            <div>12:00-13:30 - Matematyka sala 23</div >
+            <div>14:00-15:30 - Matematyka sala 3d</div >
+        </div>
+        <div class="bg-backgroundGray-default p-7 text-lg rounded-lg">
+            <div  class="text-2xl">Ostatnie wiadomosci</div>
+            <div class=" italic">Przykładowa zawartość</div>
+            <div>Próbne egzaminy maturalne</div >
+            <div>Ogłoszenie o próbach alarmowych</div >
+        </div>
+        <div class="bg-backgroundGray-default p-7 text-lg rounded-lg">
+            <div  class="text-2xl">Zadane zadania</div>
+            <div class=" italic">Przykładowa zawartość</div>
+            <div>Praca domowa z cwiczen</div >
+            <div>Praca domowa zadania ze strony 34</div >
+        </div>
+    </div>
+</div>
